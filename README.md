@@ -6,7 +6,11 @@ Recently, Batch DropBlock network (BDB) has demonstrated its effectiveness on pe
 
 
 ## Framework 
+![fig-1](https://github.com/wangxiao5791509/STADB_ReID/blob/main/framework.png)
 
+
+## Feature Visualization && Results 
+![fig-2](https://github.com/wangxiao5791509/STADB_ReID/blob/main/results.png)
 
 ## Environment 
 
