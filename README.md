@@ -33,7 +33,7 @@ python main_reid.py train --save_dir='./pytorch-ckpt/market-bfe' --max_epoch=400
 
 ## Testing 
 ```bash
-python3 main_reid.py train --save_dir='./pytorch-ckpt/market_bfe' --model_name=bfe --train_batch=32 --test_batch=32 --dataset=market1501 --pretrained_model='./pytorch-ckpt/market_bfe/best_model.pth.tar' --evaluate
+python main_reid.py train --save_dir='./pytorch-ckpt/market_bfe' --model_name=bfe --train_batch=32 --test_batch=32 --dataset=market1501 --pretrained_model='./pytorch-ckpt/market_bfe/best_model.pth.tar' --evaluate
 ```
 
 ## Citation 
