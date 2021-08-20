@@ -1,0 +1,74 @@
+=========user config==========
+{'adjust_lr': True,
+ 'best_rank': -inf,
+ 'dataset': 'duke',
+ 'datatype': 'person',
+ 'eval_step': 30,
+ 'evaluate': False,
+ 'gamma': 0.1,
+ 'last_stride': 1,
+ 'loss': 'triplet',
+ 'lr': 0.0001,
+ 'margin': None,
+ 'max_epoch': 600,
+ 'mode': 'retrieval',
+ 'model_name': 'bfe',
+ 'momentum': 0.9,
+ 'num_gpu': 1,
+ 'num_instances': 4,
+ 'optim': 'adam',
+ 'pretrained_model': None,
+ 'print_freq': 30,
+ 'random_crop': False,
+ 're_ranking': False,
+ 'save_dir': '/DATA/wangsheng/checkpoint_adl/duke-adl_cat/0.25-0.8',
+ 'savefig': None,
+ 'seed': 0,
+ 'start_epoch': 0,
+ 'test_batch': 128,
+ 'train_batch': 128,
+ 'weight_decay': 0.0005,
+ 'workers': 10}
+============end===============
+currently using GPU
+initializing dataset duke
+=> Market1501 loaded
+Dataset statistics:
+  ------------------------------
+  subset   | # ids | # images
+  ------------------------------
+  train    |   702 |    16522
+  query    |   702 |     2228
+  gallery  |  1110 |    17661
+  ------------------------------
+  total    |  1404 |    36411
+  ------------------------------
+initializing model ...
+Traceback (most recent call last):
+  File "main_reid.py", line 203, in <module>
+    fire.Fire()
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/fire/core.py", line 127, in Fire
+    component_trace = _Fire(component, args, context, name)
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/fire/core.py", line 366, in _Fire
+    component, remaining_args)
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/fire/core.py", line 542, in _CallCallable
+    result = fn(*varargs, **kwargs)
+  File "main_reid.py", line 92, in train
+    model = BFE(dataset.num_train_pids, 0.25, 0.80)
+  File "/DATA/wangsheng/code/adl/adl3_threeBranch/models/networks.py", line 233, in __init__
+    resnet = resnet50(pretrained=True)
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/torchvision/models/resnet.py", line 199, in resnet50
+    model.load_state_dict(model_zoo.load_url(model_urls['resnet50']))
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/torch/nn/modules/module.py", line 763, in load_state_dict
+    load(self)
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/torch/nn/modules/module.py", line 761, in load
+    load(child, prefix + name + '.')
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/torch/nn/modules/module.py", line 761, in load
+    load(child, prefix + name + '.')
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/torch/nn/modules/module.py", line 761, in load
+    load(child, prefix + name + '.')
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/torch/nn/modules/module.py", line 758, in load
+    state_dict, prefix, local_metadata, True, missing_keys, unexpected_keys, error_msgs)
+  File "/home/wangsheng/anaconda3/envs/wangsheng/lib/python3.6/site-packages/torch/nn/modules/module.py", line 710, in _load_from_state_dict
+    param.copy_(input_param)
+KeyboardInterrupt

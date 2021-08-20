@@ -1,0 +1,7 @@
+python3
+cython
+torch
+torchvision
+scikit-learn
+tensorboardX
+fire

@@ -12,18 +12,30 @@ Recently, Batch DropBlock network (BDB) has demonstrated its effectiveness on pe
 ## Feature Visualization && Results 
 ![fig-2](https://github.com/wangxiao5791509/STADB_ReID/blob/main/results.png)
 
-## Environment 
+## Environment  require
 
+pip install python3
+pip install cython
+pip install torch
+pip install torchvision
+pip install scikit-learn
+pip install tensorboardX
+pip install fire
 
 
 ## Training 
 
-
+### Traning Market1501
+```bash
+python main_reid.py train --save_dir='./pytorch-ckpt/market-bfe' --max_epoch=400 --eval_step=30 --dataset=market1501 --test_batch=128 --train_batch=128 --optim=adam --adjust_lr
+```
 
 
 ## Testing 
-
-
+### Test Market1501
+```bash
+python3 main_reid.py train --save_dir='./pytorch-ckpt/market_bfe' --model_name=bfe --train_batch=32 --test_batch=32 --dataset=market1501 --pretrained_model='./pytorch-ckpt/market_bfe/best_model.pth.tar' --evaluate
+```
 
 ## Citation 
 If you find this work useful for your research, please cite this paper: 
